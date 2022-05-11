@@ -35,10 +35,10 @@ def ppr(x1,y1,x2,y2):#relative=True, pick(+x1,+y1), place(+x1+x2, +y1+y2)
     robot.movel(bsr(0, 0,depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # down
     gripper.close_gripper()
     time.sleep(0.5)
-    robot.movel(bsr(0, 0, -depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # up
+    robot.movel(bsr(0, 0,-depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # up
     robot.movel(bsr(0, y2, 0, 0, 0, 0), acc=acc, vel=vel, relative=True)  # move y2
     robot.movel(bsr(x2, 0, 0, 0, 0, 0), acc=acc, vel=vel, relative=True)  # move x2
-    robot.movel(bsr(0, 0, -depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # down
+    robot.movel(bsr(0, 0,-depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # down
     gripper.open_gripper()
-    robot.movel(bsr(0, 0, 0.08, 0, 0, 0), acc=acc, vel=vel, relative=True)  # up
+    robot.movel(bsr(0, 0,-depth, 0, 0, 0), acc=acc, vel=vel, relative=True)  # up
     gripper.close_gripper()
